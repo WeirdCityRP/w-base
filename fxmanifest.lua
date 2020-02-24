@@ -4,5 +4,9 @@ game 'gta5'
 description 'Base Framework'
 
 client_scripts {
-    'client/exports/chat.js'
+    'exports/chat/client.js'
+}
+
+server_scripts {
+    'exports/chat/server.js'
 }

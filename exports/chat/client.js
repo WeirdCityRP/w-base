@@ -1,13 +1,13 @@
-function localMessage(msg) {
+function localMessage(args) {
     emit('chat:addMessage', {
-      args: [ msg ]
+      args: args
     });
 }
 exports( 'localMessage', localMessage );
 
 function addSuggestion(cmdName, description, param) {
   setImmediate(() => {
-    emit('chat:addSuggestion', cmdName, description, param);
+    emit('chat:addSuggestion', `/${cmdName}`, description, param);
   });
 }
 exports( 'addSuggestion', addSuggestion );
