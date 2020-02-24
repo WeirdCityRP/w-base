@@ -4,8 +4,3 @@ function globalMessage(args) {
   });
 }
 exports( 'globalMessage', globalMessage );
-
-function printThis() {
-  console.log('export injected');
-}
-exports( 'printThis', printThis );
