@@ -1,5 +1,5 @@
-function globalMessage(args) {
-  emitNet("chat:addMessage", -1, {
+function globalMessage(src, args) {
+  emitNet("chat:addMessage", src, {
     args: args
   });
 }
