@@ -1,6 +1,11 @@
-function globalMessage(src, args) {
+/**
+ * 
+ * @param {Number} src 
+ * @param {Array} arr 
+ */
+function addMessage(src, arr) {
   emitNet("chat:addMessage", src, {
-    args: args
+    args: arr
   });
 }
-exports( 'globalMessage', globalMessage );
+exports( 'addMessage', addMessage );

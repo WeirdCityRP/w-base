@@ -1,13 +1,10 @@
-function localMessage(args) {
+/**
+ * 
+ * @param {array} arr 
+ */
+function addMessage(arr) {
     emit('chat:addMessage', {
-      args: args
+      args: arr
     });
 }
-exports( 'localMessage', localMessage );
-
-function addSuggestion(cmdName, description, param) {
-  setImmediate(() => {
-    emit('chat:addSuggestion', `/${cmdName}`, description, param);
-  });
-}
-exports( 'addSuggestion', addSuggestion );
+exports( 'addMessage', addMessage );
